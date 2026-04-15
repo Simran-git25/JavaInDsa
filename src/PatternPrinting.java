@@ -108,7 +108,7 @@ public class PatternPrinting {
                 }
             }
             System.out.println();
-        }//hello
+        }
         sc.close();
     }
 }
