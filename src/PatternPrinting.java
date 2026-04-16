@@ -96,19 +96,41 @@ public class PatternPrinting {
 
 
         //hollow pyramid pattern
-        for(int row=1;row<=n;row++){
-            for(int space=1;space<=n-row;space++){
+//        for(int row=1;row<=n;row++){
+//            for(int space=1;space<=n-row;space++){
+//                System.out.print("  ");
+//            }
+//            for(int col=1;col<=2*row-1;col++){
+//                if(row==1 || row==n  || col==1 || col==2*row-1){
+//                    System.out.print("* ");
+//                }else{
+//                    System.out.print("  ");
+//                }
+//            }
+//            System.out.println();
+//        }
+
+        //solid diamond pattern
+        for(int row=1;row<=n/2+1;row++){
+            for(int col=1;col<=(n/2+1)-row;col++){
                 System.out.print("  ");
             }
             for(int col=1;col<=2*row-1;col++){
-                if(row==1 || row==n  || col==1 || col==2*row-1){
-                    System.out.print("* ");
-                }else{
-                    System.out.print("  ");
-                }
+                System.out.print("* ");
             }
             System.out.println();
         }
+        for(int row=1;row<=n/2;row++){
+            for(int col=1;col<=row;col++){
+                System.out.print("  ");
+            }
+            for(int col=1;col<=2*(n/2-row)+1;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+
         sc.close();
     }
 }
