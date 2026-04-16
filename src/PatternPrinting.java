@@ -3,7 +3,7 @@ public class PatternPrinting {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n=sc.nextInt();
-        int m=sc.nextInt();
+       // int m=sc.nextInt();
 
         // pattern hollow square
 
@@ -111,12 +111,37 @@ public class PatternPrinting {
 //        }
 
         //solid diamond pattern
+//        for(int row=1;row<=n/2+1;row++){
+//            for(int col=1;col<=(n/2+1)-row;col++){
+//                System.out.print("  ");
+//            }
+//            for(int col=1;col<=2*row-1;col++){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+//        for(int row=1;row<=n/2;row++){
+//            for(int col=1;col<=row;col++){
+//                System.out.print("  ");
+//            }
+//            for(int col=1;col<=2*(n/2-row)+1;col++){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+
+
+        //hollow solid diamond
         for(int row=1;row<=n/2+1;row++){
             for(int col=1;col<=(n/2+1)-row;col++){
                 System.out.print("  ");
             }
             for(int col=1;col<=2*row-1;col++){
-                System.out.print("* ");
+                if(row==1 || col==1 || col==2*row-1){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
             }
             System.out.println();
         }
@@ -125,7 +150,11 @@ public class PatternPrinting {
                 System.out.print("  ");
             }
             for(int col=1;col<=2*(n/2-row)+1;col++){
-                System.out.print("* ");
+                if(col==1 || col==2*(n/2-row)+1){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
             }
             System.out.println();
         }
